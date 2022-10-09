@@ -6,23 +6,25 @@
         <meta name="viewpoint" content="width=device.width, intial scale=1.0">
         <title>My Portfolio</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/b1d8310b54.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
             <div class="container">
                 <nav>
                     <img src="images/logo.png" class="logo">
-                    <ul>
+                    <ul id="sidemenu">
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#Services">Services</a></li>
                         <li><a href="#portfolio">My Work</a></li>
                         <li><a href="#contacts">Contacts</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
                     </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
                 </nav>
             <div class="header-text">
-                <p>Developer</p>
+                <p>Software Developer</p>
                 <h1>Hello, I am <span>Yinkid</span><br>From Nigeria</h1>
             </div>
             </div>
@@ -75,7 +77,7 @@
                 <h1 class="sub-title">My Services</h1>
                 <div class="services-list">
                     <div>
-                        <i class="fas fa-code"></i>
+                        <i class="fa-solid fa-code"></i>
                         <h2> Web development</h2>
                         <p>This Portfolio website as an instance</p>
                         <a href="$">learn more</a>
@@ -101,16 +103,61 @@
                 <h1 class="sub-title">My Work</h1>
                 <div class="work-list">
                     <div class="work">
-                        <img src="images/QROGA.png">
+                        <img src="images/programmin (2).jpg">
+                        <div class="layer">
+                            <h3>Websites</h3>
+                            <p>Websites developed by me</p>
+                            <a href="$"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <div class="work">
-                        <img src="">
+                        <img src="images/social-media-marketing-featured-image.png">
+                        <div class="layer">
+                            <h3>Social Media Sites</h3>
+                            <p>Social media handled by me <br> @mfmopenheavensarena on IG <br> @scripturesofthebible on TikTok <br> @dyna_media on IG <br> @dyna_media onn Telegram</p>
+                            <a href="https://www.instagram.com/dyna_media/"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                     </div>
                     <div class="work">
-                        <img src="">
+                        <img src="images/6-BEST-Crypto-Exchanges-Trading-Platforms-June-600x400 (2).jpg">
+                        <div class="layer">
+                            <h3>Crypto Trading</h3>
+                            <p>Trading results by me</p>
+                            <a href="$"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    </div>
+                </div>
+                <a href="&" class="mtn">See more</a>
+            </div>
+        </div>
+
+        <div id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-duotone fa-at"></i> elijah.okeowo01@gmail.com</p>
+                        <p><i class="fa-sharp fa-solid fa-phone-volume"></i> +2348151267997</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/yinkiid/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/YinkidMax"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/yinkidmax/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/elijahokeowo/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="images/Curriculum Vitae (Elijah Yinjesu Okeowo).docx" download class="mtn mtn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="mtn mtn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
+            <div class="copyright">Copyright @ Yinkid, 2022</div>
         </div>
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
@@ -125,6 +172,35 @@
                 event.currentTarget.classList.add("active-links");
                 document.getElementById(tabname).classList.add("active-tab");
             }
+        </script>
+
+        <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxWFYuRU5B-lPkpNnU_d57YJq_rptP0itXCAzkpYQ5l3S0RjBtbY08NAhVbHtwmrbeZFA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
         </script>
     </body>
 </html>
