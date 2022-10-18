@@ -220,6 +220,7 @@ nav ul li a:hover::after{
 .layer b a{
     cursor: pointer;
     text-decoration: none;
+    color: wheat;
 }
 .layer b a:hover{
     color: #052b4e;
