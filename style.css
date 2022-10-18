@@ -207,7 +207,7 @@ nav ul li a:hover::after{
     font-weight: 500;
     margin-bottom: 20px;
 }
-.layer a{
+.layer a i{
     margin-top: 20px;
     text-decoration: none;
     font-size: 18px;
@@ -217,10 +217,11 @@ nav ul li a:hover::after{
     width: 60px;
     background: #fff;
 }
-.layer b{
+.layer b a{
     cursor: pointer;
+    text-decoration: none;
 }
-.layer b:hover{
+.layer b a:hover{
     color: #052b4e;
 }
 .work:hover img{
