@@ -265,6 +265,25 @@ nav ul li a:hover::after{
 .services-list div a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
+.services-list div {
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.services-list div a {
+    word-break: break-word;
+}
+@media (max-width: 768px) {
+    .services-list div {
+        padding: 24px;
+    }
+}
+.services-list div a {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.services-list div a:hover {
+    transform: scale(1.02);
+}
 
 
 #portfolio{
@@ -500,6 +519,7 @@ nav .fas{
     display: block;
 
 }
+
 
 
 
