@@ -260,6 +260,9 @@ nav ul li a:hover::after{
 .service-link {
     margin-bottom: 12px;
 }
+.services-list div a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
 
 
 #portfolio{
@@ -495,6 +498,7 @@ nav .fas{
     display: block;
 
 }
+
 
 
 
