@@ -185,9 +185,12 @@ nav ul li a:hover::after{
 }
 .services-list div a{
     text-decoration: none;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
+    font-size: 16px;          /* Bigger text */
+        padding: 14px 18px;       /* Bigger tap area */
+        border-radius: 8px;
+        margin-top: 12px;
+        width: 100%;
+        box-sizing: border-box;
     color: antiquewhite;
 }
 .services-list div:hover{
@@ -519,6 +522,7 @@ nav .fas{
     display: block;
 
 }
+
 
 
 
