@@ -177,9 +177,11 @@ nav ul li a:hover::after{
     font-weight: 400;
     margin-bottom: 15px;
 }
-.services-list div p{
+.services-list div p {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;   /* normal */
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 .services-list div a{
     text-decoration: none;
@@ -498,6 +500,7 @@ nav .fas{
     display: block;
 
 }
+
 
 
 
