@@ -233,6 +233,17 @@ nav ul li a:hover::after{
         font-size: 14px;
     }
 }
+@media (max-width: 768px) {
+    .services-list div {
+        text-align: center;
+    }
+
+    .services-list div i {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 #portfolio{
     padding: 50px 0;
@@ -467,6 +478,7 @@ nav .fas{
     display: block;
 
 }
+
 
 
 
