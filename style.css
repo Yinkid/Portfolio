@@ -257,6 +257,9 @@ nav ul li a:hover::after{
         text-align: center;
     }
 }
+.service-link {
+    margin-bottom: 12px;
+}
 
 
 #portfolio{
@@ -492,6 +495,7 @@ nav .fas{
     display: block;
 
 }
+
 
 
 
