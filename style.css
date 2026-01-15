@@ -246,6 +246,17 @@ nav ul li a:hover::after{
 .services-list div {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
+@media (max-width: 768px) {
+    .services-list div a {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 14px;
+        border-radius: 6px;
+        margin-top: 10px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}
 
 
 #portfolio{
@@ -481,6 +492,7 @@ nav .fas{
     display: block;
 
 }
+
 
 
 
